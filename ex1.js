@@ -58,9 +58,33 @@
 }
 
 { //5. Ternary Operator (삼항연산자)
-     console.log(true ? '참' : '거짓')
+    // console.log(true ? '참' : '거짓');
 }
 
-{6. 
+{ //6. Optional chaining
+    const person1 = {
+        name: 'Leejung',
+        job: {
+            title: 'Dancer',
+            manager: {
+                name: 'Lia'
+            },
+        },
+    };
+    const person2 = {
+        name: 'Bob',
+    }
 
+    function printManager(person){
+        console.log(person.job?.manager?.name); //if exist
+    }
+    // printManager(person1);
+    // printManager(person2);
+}
+
+{ //7. Nullish Coalescing Operator
+    const name = '';
+    const userName = name || 'Guest'; //When false -> Right
+    const nickName = name ?? 'Undefined'; //When null or undefined -> Right
+    console.log(userName, nickName);
 }
